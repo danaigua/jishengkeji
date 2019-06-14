@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ggtggt.dao.IRelationDao">
+	
+	<resultMap type="Relationc" id="RelationcResult">
+		<result property="name" column="name"/>
+		<result property="telephone" column="telephone"/>
+		<result property="email" column="email"/>
+		<result property="desc" column="desc"/>
+	</resultMap>
+	
+	<select id="list" parameterType="Map" resultMap="RelationcResult">
+		select * from relation <if test="start != null and size != null">limit #{start}, #{size}</if>
+	</select>
+	<insert id="add" parameterType="Relationc">insert into relation values (#{name}, #{telephone}, #{email}, #{desc})</insert>
+	<select id="relationCount" resultType="Integer">
+		select count(*) from relation;
+	</select>
+</mapper> 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ggtggt.dao.IAdminDao">
+	
+	<resultMap type="Admin" id="AdminResult">
+		<result property="uuid" column="uuid"/>
+		<result property="adminName" column="adminName"/>
+		<result property="adminPassword" column="adminPassword"/>
+		<result property="id" column="id"/>
+		
+	</resultMap>
+	
+	<select id="getByAdminName" parameterType="String" resultMap="AdminResult">select * from admin where adminName=#{adminName}</select>
+	
+	<update id="update" parameterType="Admin">
+		update admin
+		<set>
+			<if test="adminPassword!=null and adminPassword!='' ">adminPassword=#{adminPassword},</if>
+			<if test="adminName!=null and adminName!='' ">adminName=#{adminName},</if>
+		</set>
+		where id=#{id}
+	</update>
+	<delete id="delete" parameterType="String">
+		delete from admin where id=#{id}
+	</delete>
+	<insert id="add" parameterType="Admin">
+		insert into admin values(#{uuid}, #{adminName}, #{adminPassword}, null);
+	</insert>
+	<select id="adminCount" resultType="Integer">
+		select count(*) from admin;
+	</select>
+	<select id="list" parameterType="Map" resultMap="AdminResult">
+		select * from admin 
+		<if test="size != null and start != null">
+			limit #{start}, #{size}
+		</if>
+	</select>
+</mapper> 

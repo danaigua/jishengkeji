@@ -1,0 +1,105 @@
+
+
+
+/*联系我们和公司简介的共同样式*/
+.content_header{
+  height:60px;
+  line-height:60px;
+  border-bottom:1px solid #999;
+}
+
+
+
+
+
+/*联系我们的样式*/
+.contact_text_box p{
+  padding:10px 90px;
+  font-size:16px;
+}
+.youContact_left span, .youContact_right span{
+  display:block;
+  font-size:16px;
+  color:#999;
+  margin-bottom:4px;
+}
+.youContact_left div input{
+  width:325px;
+  height:47px;
+  padding-left:15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #337ab7;
+}
+.youContact_left div{
+  margin-bottom:20px;
+}
+.youContact_right_text{
+  width:100%;
+  height:239px;
+  border:1px solid #337ab7;
+  padding:10px;
+}
+.youContact_box form button{
+  width:150px;
+  background:#337ab7;
+  color:#fff;
+  position:absolute;
+  left:35px;
+  bottom:20px;
+  font-size:17px;
+  /*-webkit-transition: all .5s;*/
+  /*-moz-transition: all .5s;*/
+  /*-ms-transition: all .5s;*/
+  /*-o-transition: all .5s;*/
+  /*transition: all .5s;*/
+}
+.youContact_box form button:hover{
+  font-size:18px;
+  color:#337ab7;
+  background:#fff;
+  border:1px solid #337ab7;
+}
+.youContact_box{
+  padding:20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  position:relative;
+  border-radius: 5px;
+  border:2px solid #337ab7;
+}
+.content_left  .youContact_theme{
+  font-size:20px;
+  line-height:50px;
+  font-weight:bold;
+}
+p span.contact_text_wei, p span.contact_text_chuan{
+  float:right;
+}
+.contact_text_box p span{
+  font-size:16px;
+}
+.youContact_theme i {
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+  background:url(../image/xinghao.png);
+  background-size:100% 100%;
+  margin-right:5px;
+}
+form .youContact_left{
+  padding-bottom:64px;
+}
+.contact_text_box{
+  font-size:16px;
+
+}
+
+
+
+
+
+
+
+

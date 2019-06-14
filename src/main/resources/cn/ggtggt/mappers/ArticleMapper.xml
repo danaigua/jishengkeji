@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ggtggt.dao.IArticleDao">
+	
+	<resultMap type="Article" id="ArticleResult">
+		<result property="articleInfo" column="articleInfo"/>
+		<result property="articleTitle" column="articleTitle"/>
+		<result property="uuid" column="uuid"/>
+		<result property="articleAuthor" column="articleAuthor"/>
+		<result property="id" column="id"/>
+		<result property="simpleArticleInfo" column="simpleArticleInfo"/>
+		<result property="articleTime" column="articleTime"/>
+		<result property="articleWest" column="articleWest"/>
+		<result property="articlePic" column="articlePic"/>
+	</resultMap>
+	<insert id="add" parameterType="Article">
+		insert into article values (#{articleInfo}, #{articleTitle}, #{uuid}, #{articleAuthor},
+									null, #{simpleArticleInfo}, #{articleTime}, #{articleWest}, #{articlePic});
+	</insert>
+	<update id="update" parameterType="Article">
+		update article 
+			<set>
+				<if test="articleTitle != null and articleTitle !='' ">  articleTitle = #{articleTitle}</if>
+				<if test="articleInfo != null and articleInfo != '' ">  articleInfo = #{articleInfo}</if>
+				<if test="uuid != null and uuid !='' ">  uuid = #{uuid}</if>
+				<if test="articleAuthor != null and articleAuthor !='' ">  articleAuthor = #{articleAuthor}</if>
+				<if test="simpleArticleInfo != null and simpleArticleInfo !='' ">  simpleArticleInfo = #{simpleArticleInfo}</if>
+				<if test="articleTime != null and articleTime !='' ">  articleTime = #{articleTime}</if>
+				<if test="articleWest != null and articleWest !='' ">  articleWest = #{articleWest}</if>
+				<if test="articlePic != null and articlePic !='' ">  articlePic = #{articlePic}</if>
+			</set>
+			where id = #{id}
+	</update>
+	<delete id="delete">
+		delete from article where id = #{id}
+	</delete>
+	<select id="list" parameterType="Map" resultMap="ArticleResult">
+		select * from article order by articleWest DESC
+		<if test="start!=null and size!=null">limit #{start}, #{size}</if>
+	</select>
+	<select id="articleCount" resultType="Integer">select count(*) from article</select>
+	<select id="findArticle" parameterType="String" resultType="Article">select * from article where id = #{id}</select>
+	<update id="changeArticle" parameterType="Article">
+		update article 
+			<set>
+				<if test="articleInfo != null and articleInfo != '' ">  articleInfo = #{articleInfo}</if>
+				<if test="articlePic != null and articlePic !='' ">  ,articlePic = #{articlePic}</if>
+			</set>
+			where id = #{id}
+	</update>
+</mapper> 

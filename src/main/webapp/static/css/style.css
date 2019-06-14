@@ -1,0 +1,26 @@
+.my{    
+	font-size: 24px;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+}
+.headPic{height:60px;}
+.headul{height:60px;}
+.headul li{height:60px;margin:0 auto;}
+.headul img{margin-top:15px;}
+.adminName{
+	position: absolute;
+    top: 0%;
+    right: -60px;
+}
+.articleEditor{
+	margin-left:50px;
+	margin-top: 20px;
+}
+.editor{
+	margin-left:80px;
+}
+.articleTable{
+    width: 1200px;
+    height: 900px;
+}

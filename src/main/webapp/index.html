@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>banner轮播</title>
+
+		<!--默认样式-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/reset.css">
+
+		<!--响应式框架-->
+		<link rel="stylesheet" type="text/css" href="/jishengkeji/static/css/bootstrap.css">
+
+		<!--css3动画库-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/animate.css">
+
+		<!--banner大图基础样式-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/slick.css">
+
+		<!--页面滚动基础样式-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/jquery.fullPage.css" />
+
+		<!--导航样式-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/head.css" />
+
+		<!--图片和滚屏样式-->
+		<link rel="stylesheet" href="/jishengkeji/static/css/index.css">
+
+	</head>
+
+	<body>
+		<!-- 导航 -->
+		<header class="header">
+			<div class="container clearfix">
+				<div class="fl left">
+					<a href="javascript:void(0)"><img src="/jishengkeji/static/image/logo.png" alt="" class="img1" /></a>
+					<a href="javascript:void(0)"><img src="/jishengkeji/static/image/logo2.jpg" alt="" class="img2" /></a>
+				</div>
+				<div class="fr nav">
+					<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+						<li class="active">
+							<a href="javascript:void(0)">首页</a>
+						</li>
+						<li class="dropdown">
+							<a href="html/contact.html">
+								联系我们 </a>
+							          <!--下拉菜单-->
+              <!--<div class="dropdown_menu">-->
+								<!--<a href="#">Custom Menu</a>-->
+								<!--<a href="#">Custom Menu</a>-->
+								<!--<a href="#">Custom Menu</a>-->
+							<!--</div>-->
+						</li>
+						<li class="dropdown">
+							<a href="html/new.html">新闻中心</a>
+							<!--<div class="dropdown_menu">-->
+								<!--<a href="#">Custom Menu</a>-->
+								<!--<a href="#">Custom Menu</a>-->
+								<!--<a href="#">Custom Menu</a>-->
+							<!--</div>-->
+						</li>
+						<li>
+							<a href="html/brief.html">公司简介</a>
+						</li>
+            <li>
+              <a href="html/case.html">工程案例</a>
+            </li>
+					</ul>
+				</div>
+				<a href="javascript:void(0)" id="navToggle">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<!--移动端的导航-->
+		<div class="m_nav">
+			<div class="top clearfix">
+				<img src="/jishengkeji/static/image/closed.png" alt="" class="closed" />
+			</div>
+			<div class="logo">
+				<img src="/jishengkeji/static/image/logo2.jpg" alt="" />
+			</div>
+			<ul class="ul" data-in="fadeInDown" data-out="fadeOutUp">
+				<li class="active">
+					<a href="index.html">首页</a>
+				</li>
+        <li class="dropdown">
+          <a href="html/contact.html">
+            联系我们 </a>
+          <!--下拉菜单-->
+          <!--<div class="dropdown_menu">-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--</div>-->
+        </li>
+        <li class="dropdown">
+          <a href="html/new.html">新闻中心</a>
+          <!--<div class="dropdown_menu">-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--<a href="#">Custom Menu</a>-->
+          <!--</div>-->
+        </li>
+        <li>
+          <a href="/jishengkeji/html/brief.html">公司简介</a>
+        </li>
+        <li>
+          <a href="/jishengkeji/html/case.html">工程案例</a>
+        </li>
+			</ul>
+		</div>
+		<!-- 内容 -->
+		<div id="index_main" class="index_main">
+			<!--导航-->
+			<div class="section section1">
+				<div class="index_banner">
+					<div class="item">
+						<div class="items scaleBg" style="background-image: url(/jishengkeji/static/image/01240_seagulls_1920x1080.jpg);"></div>
+						<div class="inner">
+							<div class="block_txt">
+								<h4> Goodliness,to be continued</h4>
+								<h2>让<span>美好持续</span>发生</h2>
+								<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="items scaleBg" style="background-image: url(/jishengkeji/static/image/2.jpg);"></div>
+						<div class="inner">
+							<div class="block_txt">
+								<h4> Goodliness,to be continued</h4>
+								<h2>让<span>美好持续</span>发生</h2>
+								<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="items scaleBg" style="background-image: url(/jishengkeji/static/image/banner2.jpg);"></div>
+						<div class="inner">
+							<div class="block_txt">
+								<h4> </h4>
+								<h2><span>0-12岁</span><br>可持续发展教育体系</h2>
+								<h3>0-3岁早教  |  3-6岁幼儿园  |  5-12岁成长衔接  |  6-12岁小学</h3>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="items scaleBg" style="background-image: url(/jishengkeji/static/image/banner3.jpg);"></div>
+						<div class="inner">
+							<div class="block_txt">
+								<h4> </h4>
+								<h2>幼儿园园所整体解决方案</h2>
+								<h3>全程支持  |  个性服务</h3>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="items scaleBg" style="background-image: url(/jishengkeji/static/image/banner4.jpg);"></div>
+						<div class="inner">
+							<div class="block_txt">
+								<h4>  </h4>
+								<h2>成长管理发展测评</h2>
+								<h3>科学量表  |  全面评估  |  教育指导</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="left slick_txt">
+					<div class="prev slick_arrow"></div>
+				</div>
+				<div class="right slick_txt">
+					<div class="next slick_arrow"></div>
+				</div>
+				<div class="number">
+					<div class="inner clearfix">
+						<span class="active">01</span>
+						<span>02</span>
+						<span>03</span>
+						<span>04</span>
+						<span>05</span>
+					</div>
+				</div>
+			</div>
+			<div class="section section2 incontact_img">
+				<div class="container inContact">
+					<h2 class="text-center">公司简洁</h2>
+          <small class="text-center">济圣环境科技有限公司成立于2002年，注册资本5000万元</small>
+          <p>具有环境工程设计资质、环境工程专业承包资质、建筑机电安装工程专业承包资质、安全生产许可证，已通过ISO9001、ISO14001、ISO18001等质量体系认证，可承接BOT、EPC等模式的污水处理整体工程，公司的业务范围覆盖工业废水处理、城镇污水处理、中水回用、废气处理及沼气资源化、固废处理及资源化、环保设备制造等领域。</p>
+
+          <a href="html/brief.html" class="signIn_botton btn btn-default btn-lg">了解更多 <i></i></a>
+        </div>
+			</div>
+			<div class="section section3">
+				<div class="container">
+					<h2 class="news_theme">推荐新闻</h2>
+          <div class="media news_box">
+            <div class="media-left news_img">
+              <a href="html/article.html">
+                <img src="/jishengkeji/static/image/2.jpg" alt="" class="media-object">
+              </a>
+            </div>
+            <div class="media-body">
+              <a href="/jishengkeji/static/html/article.html">
+              <h4 class="media-heading">工业污水处理污泥稳定</h4>
+              <p class="news_box_time">2019年6月4日</p>
+              <p>污泥稳定是指去除污泥中的部分有机物质或将污泥中的不稳定有机物质转化为较稳定物质．使污泥的有机物含量减少40％以上，不再散发异味，即使话泥以后经过较长时间的堆置．其主要成分也不再发生明显的变化。</p>
+              </a>
+            </div>
+          </div>
+          <div class="media news_box">
+            <div class="media-left news_img">
+              <a href="/jishengkeji/static/html/article.html">
+                <img src="/jishengkeji/static/image/2.jpg" alt="" class="media-object">
+              </a>
+            </div>
+            <div class="media-body">
+              <a href="/jishengkeji/html/article.html">
+              <h4 class="media-heading">工业污水处理污泥稳定</h4>
+              <p class="news_box_time">2019年6月4日</p>
+              <p>污泥稳定是指去除污泥中的部分有机物质或将污泥中的不稳定有机物质转化为较稳定物质．使污泥的有机物含量减少40％以上，不再散发异味，即使话泥以后经过较长时间的堆置．其主要成分也不再发生明显的变化。</p>
+              </a>
+            </div>
+          </div>
+				</div>
+			</div>
+			<div class="section section4">
+				<div class="container">
+          <h2 class="contact_theme text-center">联系我们</h2>
+					<div class="contact_box">
+            <div class="contact_department row">
+              <div class="col-md-6 contact_ji">
+                <div>
+                  <i></i>
+                  <h2>技术部</h2>
+                  <p>联系人 : 梁东海</p>
+                  <p>电话 : 13129155546</p>
+                  <p>QQ : 956821201</p>
+                </div>
+              </div>
+              <div class="col-md-6 contact_ren">
+                <div>
+                  <i></i>
+                  <h2>人事部</h2>
+                  <p>联系人 : 梁东海</p>
+                  <p>电话 : 13129155546</p>
+                  <p>QQ : 956821201</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact_department row">
+              <div class="col-md-6 contact_xiao">
+                <div>
+                  <i></i>
+                  <h2>销售部</h2>
+                  <p>联系人 : 梁东海</p>
+                  <p>电话 : 13129155546</p>
+                  <p>QQ : 956821201</p>
+                </div>
+              </div>
+              <div class="col-md-6 contact_ren">
+                <div>
+                  <i></i>
+                  <h2>人事部</h2>
+                  <p>联系人 : 梁东海</p>
+                  <p>电话 : 13129155546</p>
+                  <p>QQ : 956821201</p>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/jishengkeji/static/js/jquery.min.js"></script>
+		<script src="/jishengkeji/static/js/jquery.fullPage.min.js"></script>
+		<script src="/jishengkeji/static/js/index_slick.js"></script>
+		<script src="/jishengkeji/static/js/index.js"></script>
+
+	</body>
+
+</html>
